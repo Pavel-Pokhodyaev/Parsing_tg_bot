@@ -11,7 +11,7 @@ options.add_argument('headless')  # Enabling/Disabling Visual
 driver = webdriver.Chrome(options=options)
 driver.get("https://d-dymok.ru/katalog/odnostennye-dymohody/")
 tovar_elements = driver.find_elements(By.XPATH, '//*[@id="center_column"]/ul/li')
-result_message = ""
+result_message = "Result: "
 for element in tovar_elements:
     name_tovar = element.find_element(By.XPATH, './div/div/div[3]/div/div[1]/div/span').text
     price_tovar = element.find_element(By.XPATH, './div/div/div[3]/div/div[1]/div/div/div[1]/div[1]/span').text
